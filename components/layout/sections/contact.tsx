@@ -75,7 +75,11 @@ ${message}`
             </h2>
           </div>
           <p className="mb-8 text-gray-600 text-justify">
-            Got a cool idea? Don’t be shy, hit us up at vomkhang35@gmail.com or ring us at +84 888 032 465! You can also fill out the form right next to this—we’ll get back to you about your project real quick. We’re so ready to chat, love ya tons!
+            Got a cool idea? Don&apos;t be shy, hit us up at
+            vomkhang35@gmail.com or ring us at +84 888 032 465! You can also
+            fill out the form right next to this—we&apos;ll get back to you
+            about your project real quick. We&apos;re so ready to chat, love ya
+            tons!
           </p>
 
           <div className="space-y-6">
