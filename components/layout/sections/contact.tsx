@@ -71,7 +71,7 @@ ${message}`
               Contact
             </span>
             <h2 className="mt-2 text-4xl font-extrabold text-gray-900">
-              Let's Talk
+              Let&apos;s Talk
             </h2>
           </div>
           <p className="mb-8 text-gray-600 text-justify">
