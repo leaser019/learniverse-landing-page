@@ -91,9 +91,9 @@ export const TeamSection = () => {
           <span className="text-blue-500"> TEAM</span>
         </h2>
       </div>
-{/* sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 */}
+      {/* sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 */}
       <div className="grid grid-cols-3 gap-8">
-        <div ></div>
+        <div></div>
         {teamList.map(
           ({ imageUrl, firstName, lastName, positions, socialNetworks }) => (
             <Card
@@ -107,7 +107,7 @@ export const TeamSection = () => {
                     alt={`${firstName} ${lastName}`}
                     width={300}
                     height={300}
-                    className="w-full aspect-square object-cover saturate-0 transition-all duration-300 ease-in-out group-hover:saturate-100 group-hover:scale-105"
+                    className="w-full aspect-square object-cover transition-all duration-300 ease-in-out group-hover:scale-105"
                   />
                 </div>
                 <CardTitle className="px-6 py-4 text-xl font-semibold">
