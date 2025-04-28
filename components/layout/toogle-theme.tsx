@@ -9,20 +9,30 @@ export const ToggleTheme = () => {
 
   useEffect(() => {
     setMounted(true);
-  }, []);
+    
+    const savedTheme = localStorage.getItem("learniverse-theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  }, [setTheme]);
 
   if (!mounted) return null;
 
   const isDark = theme === "dark";
 
+  const toggleTheme = () => {
+    const newTheme = isDark ? "light" : "dark";
+    setTheme(newTheme);
+  };
+
   return (
     <motion.div
       whileTap={{ scale: 0.95 }}
-      onClick={() => setTheme(isDark ? "light" : "dark")}
+      onClick={toggleTheme}
       className="flex items-center cursor-pointer bg-gradient-to-r from-purple-500/10 to-blue-500/10 dark:from-purple-400/20 dark:to-blue-400/20 p-1.5 rounded-full w-[70px] h-[36px] relative"
     >
       <motion.div
-        className="bg-gradient-to-r  bg-indigo-500 dark:from-blue-500 dark:to-indigo-600 w-[28px] h-[28px] rounded-full flex items-center justify-center shadow-lg"
+        className="bg-gradient-to-r bg-indigo-500 dark:from-blue-500 dark:to-indigo-600 w-[28px] h-[28px] rounded-full flex items-center justify-center shadow-lg"
         animate={{ x: isDark ? 34 : 0 }}
         transition={{ type: "spring", stiffness: 400, damping: 20 }}
       >

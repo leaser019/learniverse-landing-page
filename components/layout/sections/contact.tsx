@@ -64,17 +64,16 @@ ${message}`
   return (
     <section id="contact" className="container mx-auto py-24 sm:py-32">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        {/* Contact Info */}
         <div>
           <div className="mb-6">
-            <span className="text-sm font-semibold uppercase text-blue-500 tracking-wide">
+            <span className="text-sm font-semibold uppercase text-blue-500 dark:text-blue-400 tracking-wide">
               Contact
             </span>
-            <h2 className="mt-2 text-4xl font-extrabold text-gray-900">
+            <h2 className="mt-2 text-4xl font-extrabold text-foreground dark:text-slate-100">
               Let&apos;s Talk
             </h2>
           </div>
-          <p className="mb-8 text-gray-600 text-justify">
+          <p className="mb-8 text-muted-foreground dark:text-slate-300 text-justify">
             Got a cool idea? Don&apos;t be shy, hit us up at
             vomkhang35@gmail.com or ring us at +84 888 032 465! You can also
             fill out the form right next to this—we&apos;ll get back to you
@@ -84,40 +83,55 @@ ${message}`
 
           <div className="space-y-6">
             <div className="flex items-start">
-              <Building2 className="mt-1 text-blue-500" />
+              <Building2 className="mt-1 text-blue-500 dark:text-blue-400" />
               <div className="ml-4">
-                <h4 className="font-semibold text-gray-700">Address</h4>
-                <p className="text-gray-600">Ho Chi Minh City, Vietnam</p>
+                <h4 className="font-semibold text-foreground dark:text-slate-200">
+                  Address
+                </h4>
+                <p className="text-muted-foreground dark:text-slate-300">
+                  Ho Chi Minh City, Vietnam
+                </p>
               </div>
             </div>
             <div className="flex items-start">
-              <Phone className="mt-1 text-blue-500" />
+              <Phone className="mt-1 text-blue-500 dark:text-blue-400" />
               <div className="ml-4">
-                <h4 className="font-semibold text-gray-700">Call us</h4>
-                <p className="text-gray-600">+84 888 032 465</p>
+                <h4 className="font-semibold text-foreground dark:text-slate-200">
+                  Call us
+                </h4>
+                <p className="text-muted-foreground dark:text-slate-300">
+                  +84 888 032 465
+                </p>
               </div>
             </div>
             <div className="flex items-start">
-              <Mail className="mt-1 text-blue-500" />
+              <Mail className="mt-1 text-blue-500 dark:text-blue-400" />
               <div className="ml-4">
-                <h4 className="font-semibold text-gray-700">Email</h4>
-                <p className="text-gray-600">vomkhang35@gmail.com</p>
+                <h4 className="font-semibold text-foreground dark:text-slate-200">
+                  Email
+                </h4>
+                <p className="text-muted-foreground dark:text-slate-300">
+                  vomkhang35@gmail.com
+                </p>
               </div>
             </div>
             <div className="flex items-start">
-              <Clock className="mt-1 text-blue-500" />
+              <Clock className="mt-1 text-blue-500 dark:text-blue-400" />
               <div className="ml-4">
-                <h4 className="font-semibold text-gray-700">Office Hours</h4>
-                <p className="text-gray-600">Mon - Fri, 8:00 AM - 4:00 PM</p>
+                <h4 className="font-semibold text-foreground dark:text-slate-200">
+                  Office Hours
+                </h4>
+                <p className="text-muted-foreground dark:text-slate-300">
+                  Mon - Fri, 8:00 AM - 4:00 PM
+                </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Contact Form */}
-        <Card className="bg-white shadow-lg rounded-lg">
+        <Card className="bg-card bg-opacity-80 dark:bg-opacity-30 dark:bg-slate-900 shadow-lg border border-muted dark:border-slate-700 rounded-lg">
           <CardHeader>
-            <h3 className="text-xl font-semibold text-gray-900">
+            <h3 className="text-xl font-semibold text-foreground dark:text-slate-100">
               Send a Message
             </h3>
           </CardHeader>
@@ -133,11 +147,13 @@ ${message}`
                     name="firstName"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>First Name</FormLabel>
+                        <FormLabel className="dark:text-slate-200">
+                          First Name
+                        </FormLabel>
                         <FormControl>
                           <Input
                             placeholder="Vo"
-                            className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                            className="focus-visible:ring-blue-800 dark:bg-slate-800 dark:border-slate-700 dark:text-slate-200"
                             {...field}
                           />
                         </FormControl>
@@ -150,11 +166,13 @@ ${message}`
                     name="lastName"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Last Name</FormLabel>
+                        <FormLabel className="dark:text-slate-200">
+                          Last Name
+                        </FormLabel>
                         <FormControl>
                           <Input
                             placeholder="Khang"
-                            className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                            className="focus-visible:ring-primary dark:bg-slate-800 dark:border-slate-700 dark:text-slate-200"
                             {...field}
                           />
                         </FormControl>
@@ -169,12 +187,14 @@ ${message}`
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel className="dark:text-slate-200">
+                        Email
+                      </FormLabel>
                       <FormControl>
                         <Input
                           type="email"
                           placeholder="you@example.com"
-                          className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                          className="focus-visible:ring-primary dark:bg-slate-800 dark:border-slate-700 dark:text-slate-200"
                           {...field}
                         />
                       </FormControl>
@@ -188,17 +208,19 @@ ${message}`
                   name="subject"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Subject</FormLabel>
+                      <FormLabel className="dark:text-slate-200">
+                        Subject
+                      </FormLabel>
                       <Select
                         onValueChange={field.onChange}
                         defaultValue={field.value}
                       >
                         <FormControl>
-                          <SelectTrigger className="border-gray-300 focus:border-blue-500 focus:ring-blue-500">
+                          <SelectTrigger className="focus-visible:ring-primary dark:bg-slate-800 dark:border-slate-700 dark:text-slate-200">
                             <SelectValue placeholder="Choose subject" />
                           </SelectTrigger>
                         </FormControl>
-                        <SelectContent>
+                        <SelectContent className="dark:bg-slate-800 dark:border-slate-700">
                           <SelectItem value="Web Development">
                             Web Development
                           </SelectItem>
@@ -224,12 +246,14 @@ ${message}`
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Message</FormLabel>
+                      <FormLabel className="dark:text-slate-200">
+                        Message
+                      </FormLabel>
                       <FormControl>
                         <Textarea
                           rows={5}
                           placeholder="Your message..."
-                          className="border-gray-300 focus:border-blue-500 focus:ring-blue-500 resize-none"
+                          className="focus-visible:ring-primary resize-none dark:bg-slate-800 dark:border-slate-700 dark:text-slate-200"
                           {...field}
                         />
                       </FormControl>
@@ -240,18 +264,7 @@ ${message}`
 
                 <button
                   type="submit"
-                  className="w-full py-3 px-4 rounded-md font-bold flex items-center justify-center text-white relative overflow-hidden transition-all duration-300 hover:shadow-lg"
-                  style={{
-                    background: "linear-gradient(to right, #2563eb, #60a5fa)",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background =
-                      "linear-gradient(to right, #1d4ed8, #3b82f6)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background =
-                      "linear-gradient(to right, #2563eb, #60a5fa)";
-                  }}
+                  className="w-full py-3 px-4 rounded-md font-bold flex items-center justify-center bg-blue-500 hover:text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-700 transition-all duration-300 hover:shadow-lg dark:shadow-blue-900/20"
                 >
                   <span>Send Message</span>
                   <svg

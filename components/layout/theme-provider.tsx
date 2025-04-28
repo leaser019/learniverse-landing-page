@@ -15,14 +15,14 @@ export function ThemeProvider({
 
   React.useEffect(() => {
     setMounted(true);
-    
+
     const applyThemeClass = () => {
       document.documentElement.classList.add("theme-transition");
       return () => {
         document.documentElement.classList.remove("theme-transition");
       };
     };
-    
+
     const cleanup = applyThemeClass();
     return () => cleanup();
   }, []);
@@ -34,8 +34,9 @@ export function ThemeProvider({
   return (
     <NextThemesProvider
       attribute="class"
-      defaultTheme="system"
+      defaultTheme="light"
       enableSystem
+      storageKey="theme"
       disableTransitionOnChange={false}
       {...props}
     >
