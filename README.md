@@ -215,11 +215,11 @@ Please ensure your code follows the project's style and passes all tests.
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🙏 Acknowledgements
-**Next.js** - The React Framework
-**Tailwind CSS** - For utility-first CSS
-**Radix UI** - For accessible UI components
-**Framer Motion** - For animations
-**Vercel** - For deployment and hosting
+- **Next.js** - The React Framework
+- **Tailwind CSS** - For utility-first CSS
+- **Radix UI** - For accessible UI components
+- **Framer Motion** - For animations
+- **Vercel** - For deployment and hosting
 
 ## 📬 Contact
 For questions, feedback, or support, please reach out through: vomkhang35@gmail.com
