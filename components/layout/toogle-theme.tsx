@@ -10,7 +10,7 @@ export const ToggleTheme = () => {
   useEffect(() => {
     setMounted(true);
     
-    const savedTheme = localStorage.getItem("learniverse-theme");
+    const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
       setTheme(savedTheme);
     }
